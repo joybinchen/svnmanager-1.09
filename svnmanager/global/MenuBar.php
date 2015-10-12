@@ -37,6 +37,11 @@ class MenuBar extends TControl
 		$this->Application->transfer("Group:AdminPage");
 	}
 
+	public function onClickGroupEditBtn($sender, $param)
+	{
+		$this->Application->transfer("Group:EditSelectPage");
+	}
+
 	public function onClickRepositoryBtn($sender, $param)
 	{
 		$this->Application->transfer("Repository:AdminPage");

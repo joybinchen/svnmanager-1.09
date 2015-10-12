@@ -3,6 +3,7 @@
 	<com:TPanel ID="MenuPanel" Visible="#$this->User->isAuthenticated()" >
 		<tr><td><com:TLinkButton ID="UserAdminButton" Text="User Admin" CausesValidation="false" OnClick="onClickUserBtn" class="menu" /></td></tr>
 		<tr><td><com:TLinkButton ID="GroupAdminButton" Text="Group Admin" CausesValidation="false" OnClick="onClickGroupBtn" class="menu" Visible="#$this->User->isAdmin()&&!$this->User->isConfigAdmin()" /></td></tr>
+    <tr><td><com:TLinkButton ID="GroupEditButton" Text="Group Admin" CausesValidation="false" OnClick="onClickGroupEditBtn" class="menu" Visible="#!$this->User->isAdmin()&&!$this->User->isConfigAdmin()" /></td></tr>
 		<tr><td><com:TLinkButton ID="RepositoryAdminButton" Text="Repository Admin" CausesValidation="false" OnClick="onClickRepositoryBtn" class="menu" Visible="#$this->User->needsRepositoryMenu()" /></td></tr>
 		<tr><td><com:TLinkButton ID="LogoutButton" Text="Logout" CausesValidation="false" OnClick="onClickLogoutBtn" class="menu" /></td></tr>
 	</com:TPanel>
